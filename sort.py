@@ -30,7 +30,7 @@ def main():
 
                 if not maybe_number in already_processed:
                     already_processed.append(maybe_number)
-                    result_fp.write(line)
+                    result_fp.write(maybe_number + "\n")
                 else:
                     logger.info('{} has already been processed'.format(maybe_number))
 
