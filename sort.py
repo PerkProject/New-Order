@@ -12,7 +12,7 @@ logger.setLevel(logging.DEBUG)
 ALLOWED_CHARS = ("1", "2", "X")
 
 def main(filename):
-    already_processed = list()
+    already_processed = dict()
 
     with open(filepath) as f:
         with open('output.txt', 'w') as result_fp:
@@ -30,7 +30,7 @@ def main(filename):
                     continue
 
                 if not maybe_number in already_processed:
-                    already_processed.append(maybe_number)
+                    already_processed[maybe_number] = None
                     result_fp.write(maybe_number + "\n")
 
 if __name__ == "__main__":
